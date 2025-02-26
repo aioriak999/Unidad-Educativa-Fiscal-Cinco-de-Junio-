@@ -1,0 +1,444 @@
+.encabezado
+{
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    background-color: #F0F0F0;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    top: 0;
+    left: 0;
+}
+
+body
+{
+    background-color: #003366;
+    padding-bottom: 60px;
+    background-image: url('icono_pagina_web.PNG');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.titulo
+{
+    color: black;
+    font-family:'ebrima';
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+a
+{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background: #888;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover
+{
+    background: #555;
+}
+
+a img 
+{
+    transition: transform 0.3s ease;
+}
+
+a img:hover 
+{
+    transform: scale(1.1);
+}
+
+.pie-pagina {
+    background-color: #17334f;
+    color: rgb(163, 159, 159);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    position: absolute; /* Inicialmente está fuera de la vista */
+    bottom: -auto; /* Lo escondemos fuera de la vista inicialmente */
+    transition: bottom 0.3s ease; /* Transición suave al aparecer */
+    border-top: 3px solid #575555a2;
+}
+
+.pie-pagina.visible {
+    position: fixed; /* Lo hace fijo al final cuando sea visible */
+    bottom: 0; /* Coloca el pie en la parte inferior de la ventana */
+}
+
+.pie-pagina .contenedor {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las tres secciones */
+    align-items: center; /* Centrado vertical */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pie-pagina .contenedor > div {
+    flex: 1; /* Cada div ocupará el mismo espacio */
+    padding: 0 10px; /* Espaciado interno de cada sección */
+}
+
+/* Parte de Redes sociales */
+.pie-pagina .redes {
+    text-align: left; /* Alinear el contenido a la izquierda */
+    padding: 10px;
+    border-right: 1px solid #aaa; /* Línea gris a la derecha */
+}
+
+.pie-pagina .redes ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.pie-pagina .redes ul li {
+    margin-right: 10px; /* Espacio entre los iconos */
+}
+
+.pie-pagina .redes img {
+    transition: transform 0.3s ease;
+}
+
+.pie-pagina .redes img:hover {
+    transform: scale(1.1);
+}
+
+/* Parte de Derechos de autor */
+.pie-pagina .derechos 
+{
+    height: 152.8px ;
+    text-align: left; /* Alinear el contenido a la izquierda */
+    padding: 10px;
+    border-right: 1px solid #aaa; /* Línea gris a la derecha */
+}
+.pie-pagina .derechos p {
+    margin: 50px 0px; /* Separar los párrafos de contacto */
+}
+
+
+/* Parte de Contacto */
+.pie-pagina .contacto {
+    text-align: left; /* Alinear el contenido a la izquierda */
+    padding: 10px;
+}
+
+.pie-pagina .contacto p {
+    margin: 5px 0; /* Separar los párrafos de contacto */
+}
+
+.pie-pagina a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pie-pagina a:hover {
+    text-decoration: underline;
+}
+
+.pie-pagina p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.cookie-regular {
+    font-family: "Cookie", serif;
+    font-weight: 400;
+    font-style: normal;
+  } 
+
+section
+{
+    padding: 40px;
+    margin-top: 140px;
+    margin-left: 0;
+    text-align: justify;
+}
+
+section .seccion1 {
+    display: flex; /* Usamos flexbox para alinear texto y la imagen */
+    justify-content: flex-start; /* Alineamos el contenido al inicio */
+    align-items: center; /* Centrar verticalmente */
+    position: relative;
+    width: 100%; /* Ocupa toda la pantalla */
+    max-width: 1200px; /* Limitar el tamaño máximo */
+    margin: 0 auto; /* Centrado */
+    padding: 40px;
+    background: linear-gradient(145deg, #0367cb, #045b8b); /* Degradado de azul */
+    color: #ffffff;
+    border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%; /* Forma ovalada como un huevo */
+    z-index: 2;
+}
+
+section .seccion1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura detrás */
+    border-radius: 30% 60% 60% 40% / 50% 50% 30% 50%; /* Mantener la misma forma ovalada */
+    z-index: -1;
+}
+
+/* Contenedor del texto */
+section .seccion1 .texto {
+    width: 100%; /* Solo ocupa el 75% del ancho */
+    padding-right: 20px; /* Espacio entre el texto y la imagen */
+    text-align: left; /* Alineación del texto a la izquierda */
+    margin-right: 1px;
+}
+
+section .seccion1 h4 {
+    font-family: "Cookie", serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: blanchedalmond; /* Color para el título */
+    left: 0;
+}
+
+section .seccion1 p {
+    font-size: medium;
+    line-height: 1.5rem;
+    margin: 0;
+    color: #f4dede; /* Color del texto */
+    text-align: right;
+}
+
+/* Contenedor de la imagen */
+section .seccion1 .imagen-container {
+    width: 60%; /* La imagen ocupa el 60% del espacio */
+    overflow: visible;
+    position: relative;
+    opacity: 0.3; /* Opacidad inicial */
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+    transition: opacity 3.5s ease-in-out; /* Transición de opacidad */
+}
+
+/* Transición de la imagen */
+section .seccion1 .imagen-container img {
+    position: absolute;
+    right: -100px; /* La imagen comienza fuera del div */
+    top: 40%;
+    transform: translateY(-50%);
+    transition: right 2s ease-in-out;
+    width: 100%; /* Aseguramos que la imagen ocupe el 100% del contenedor */
+    height: auto;
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+}
+
+/* Cuando pasamos el ratón, la imagen se mueve hacia el interior */
+section .seccion1:hover .imagen-container {
+    opacity: 0.9; /* Restauramos la opacidad al pasar el ratón */
+}
+
+/* Cuando pasamos el ratón, la imagen se mueve hacia el centro */
+section .seccion1:hover .imagen-container img {
+    right: 0; /* Mover la imagen hacia el centro del div */
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+}
+
+section .seccion2 {
+    display: flex; /* Usamos flexbox para alinear texto y la imagen */
+    justify-content: flex-start; /* Alineamos el contenido al inicio */
+    align-items: center; /* Centrar verticalmente */
+    position: relative;
+    width: 100%; /* Ocupa toda la pantalla */
+    max-width: 970px; /* Limitar el tamaño máximo */
+    margin: 0 auto; /* Centrado */
+    padding: 40px;
+    background: linear-gradient(145deg, #cacaca, #ffffff); /* Degradado de gris */
+    color: #000000;
+    border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%; /* Forma ovalada */
+    z-index: 2;
+    left: 0;
+}
+
+section .seccion2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(211, 209, 209, 0.5); /* Capa oscura detrás */
+    border-radius: 30% 60% 60% 40% / 50% 50% 35% 55%; /* Mantener la misma forma ovalada */
+    z-index: -1;
+}
+
+/* Contenedor del texto */
+section .seccion2 .texto {
+    width: 60%; /* El texto ocupa el 60% del espacio */
+    padding-right: 20px; /* Espacio entre el texto y la imagen */
+    text-align: left; /* Alineación del texto a la izquierda */
+    margin-left: 10px; /* Poner el texto más cerca del lado izquierdo */
+}
+
+section .seccion2 h4 {
+    font-family: "Cookie", serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0); /* Color para el título */
+    left: 0;
+
+}
+
+section .seccion2 p {
+    font-size: large;
+    line-height: 1.5rem;
+    margin: 0;
+    color: #000000; /* Color del texto */
+    text-align: left;
+}
+
+/* Contenedor de la imagen */
+section .seccion2 .imagen-container {
+    width: 50%; /* La imagen ocupa el 50% del espacio */
+    overflow: visible;
+    position: relative;
+    opacity: 0.3; /* Opacidad inicial */
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+    transition: opacity 3.5s ease-in-out; /* Transición de opacidad */
+}
+
+/* Transición de la imagen */
+section .seccion2 .imagen-container img {
+    position: absolute;
+    left: 196px; /* La imagen comienza fuera del div (lado derecho) */
+    top: 40%;
+    transform: translateY(-50%);
+    transition: left 2s ease-in-out; /* La imagen se moverá desde la derecha */
+    width: 92%; /* Aseguramos que la imagen ocupe el 100% del contenedor */
+    height: auto;
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+}
+
+/* Cuando pasamos el ratón, la imagen se mueve hacia el interior */
+section .seccion2:hover .imagen-container {
+    opacity: 1; /* Restauramos la opacidad al pasar el ratón */
+}
+
+/* Cuando pasamos el ratón, la imagen se mueve hacia el centro */
+section .seccion2:hover .imagen-container img {
+    left: 0; /* Mover la imagen hacia el centro del div */
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+}
+
+
+section .seccion3 {
+    display: flex; /* Usamos flexbox para alinear texto y la imagen */
+    justify-content: flex-start; /* Alineamos el contenido al inicio */
+    align-items: center; /* Centrar verticalmente */
+    position: relative;
+    width: 100%; /* Ocupa toda la pantalla */
+    max-width: 970px; /* Limitar el tamaño máximo */
+    margin: 0 auto; /* Centrado */
+    padding: 40px;
+    background: linear-gradient(145deg, #f60d0d, #f51d1d); /* Degradado de rojo a anaranjado */
+    color: #000000;
+    border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%; /* Forma ovalada */
+    z-index: 2;
+}
+
+section .seccion3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(211, 209, 209, 0.5); /* Capa oscura detrás */
+    border-radius: 30% 60% 30% 40% / 50% 50% 30% 50%; /* Mantener la misma forma ovalada */
+    z-index: -1;
+}
+
+/* Contenedor del texto */
+section .seccion3 .texto {
+    width: 75%; /* El texto ocupa el 60% del espacio */
+    padding-left: 20px; /* Espacio entre el texto y la imagen */
+    text-align: left; /* Alineación del texto a la izquierda */
+    margin-right: 10px; /* Poner el texto más cerca del lado derecho */
+}
+
+section .seccion3 h4 {
+    font-family: "Cookie", serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0); /* Color para el título */
+    right: 0;
+}
+
+section .seccion3 p {
+    font-size: large;
+    line-height: 1.5rem;
+    margin: 0;
+    color: #000000; /* Color del texto */
+    text-align: left;
+}
+
+/* Contenedor de la imagen */
+section .seccion3 .imagen-container {
+    width: 85%; /* La imagen ocupa el 50% del espacio */
+    overflow: visible;
+    position: relative;
+    opacity: 0.3; /* Opacidad inicial */
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+    transition: opacity 3.5s ease-in-out; /* Transición de opacidad */
+}
+
+/* Transición de la imagen */
+section .seccion3 .imagen-container img {
+    position: absolute;
+    left: 200px; /* La imagen comienza fuera del div (lado izquierdo) */
+    top: 40%;
+    transform: translateY(-50%);
+    transition: left 2s ease-in-out; /* La imagen se moverá desde la izquierda */
+    width: 100%; /* Aseguramos que la imagen ocupe el 100% del contenedor */
+    height: auto;
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+}
+
+/* Cuando pasamos el ratón, la imagen se mueve hacia el interior */
+section .seccion3:hover .imagen-container {
+    opacity: 0.9; /* Restauramos la opacidad al pasar el ratón */
+}
+
+/* Cuando pasamos el ratón, la imagen se mueve hacia el centro */
+section .seccion3:hover .imagen-container img {
+    left: 0; /* Mover la imagen hacia el centro del div */
+    border-radius: 60% 40% 30% 60% / 50% 50% 50% 50%;
+}
+
+section .seccion1,
+section .seccion2,
+section .seccion3 {
+    margin-bottom: 60px; /* Espacio de 40px entre cada sección */
+}
